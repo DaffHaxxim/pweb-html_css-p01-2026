@@ -80,7 +80,7 @@ CSS dipecah menjadi tiga berkas dengan pertimbangan:
 
 ## Cara Menjalankan
 
-Proyek ini tidak memerlukan server maupun proses build. Cukup buka berkas HTML-nya di browser:
+buka berkas HTML-nya di browser:
 
 ```bash
 git clone https://github.com/DaffHaxxim/pweb-html_css-p01-2026.git
@@ -101,28 +101,7 @@ Tekan **F12** untuk membuka Developer Tools, aktifkan **device toolbar**
 | **≤ 768px** | Galeri 2 kolom, linimasa berubah menurun, CV jadi 1 kolom |
 | **≤ 480px** | Galeri 1 kolom, label navbar dipendekkan, kolom tabel paling sempit disembunyikan |
 
-Breakpoint yang dipakai adalah **768px** dan **480px**, mengikuti contoh pada Modul 1.
-
----
-
-## Kredit Gambar
-
-Seluruh foto berasal dari **Wikimedia Commons** dan digunakan untuk keperluan tugas kuliah.
-Berkas berlisensi CC BY dan CC BY-SA wajib mencantumkan atribusi, dan dicantumkan di bawah ini.
-
-| Berkas | Lisensi | Atribusi |
-|---|---|---|
-| `gates-hero-500.jpg`, `gates-hero-960.jpg`, `gates-hero-1280.jpg` | CC BY 4.0 | European Commission — Lukasz Kobus |
-| `gates-portrait.jpg` | Public domain | U.S. Department of Health and Human Services |
-| `lakeside-1970.jpg` | Public domain | Bruce Burgess |
-| `microsoft-hq.jpg` | CC BY-SA 4.0 | Coolcaesar |
-| `gates-foundation.jpg` | CC BY-SA 4.0 | Sea Cow |
-| `penghargaan-1992.jpg` | Public domain | Malacañang Photo Bureau |
-| `penghargaan-2015.jpg` | GODL-India | Prime Minister's Office, India |
-| `penghargaan-2016.jpg` | Public domain | Pete Souza / White House |
-| `buku-climate.png` | Public domain | Bill Gates |
-
-Data biografi dirujuk dari artikel Wikipedia mengenai Bill Gates.
+Breakpoint yang dipakai adalah **768px** dan **480px**
 
 ---
 
