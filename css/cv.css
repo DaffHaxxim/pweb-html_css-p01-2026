@@ -1,0 +1,321 @@
+/* 
+   cv.css  -  PEMILIK: 
+   Hanya dipakai oleh cv.html.
+*/
+
+/* 
+   BADAN CV
+   grid-template-areas: tata letak digambar seperti
+   peta. Nama "kiri" muncul di dua baris, jadi kolom
+   kiri otomatis membentang dua baris tanpa perlu
+   menulis grid-row: span 2.
+*/
+
+.cv-badan {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "kiri ringkas"
+        "kiri kanan";
+    gap: 25px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.cv-kiri {
+    grid-area: kiri;
+}
+
+.cv-ringkas {
+    grid-area: ringkas;
+}
+
+.cv-kanan {
+    grid-area: kanan;
+}
+
+/* 
+   KOTAK ISI (kolom kanan)
+*/
+
+.cv-kotak {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(23, 37, 84, 0.06);
+}
+
+.cv-kotak h2 {
+    border-bottom: 2px solid #2563eb;
+    color: #172554;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+
+.cv-kotak p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* margin bawah kotak terakhir dihapus supaya dasar kolom
+   kanan rata dengan dasar panel kiri */
+.cv-kanan .cv-kotak:last-child {
+    margin-bottom: 0;
+}
+
+/* 
+   PANEL KIRI
+   Satu panel gelap yang memuat foto, data diri,
+   keahlian, bahasa, dan minat secara menyatu dari atas
+   ke bawah. Pemisah antar bagian hanya garis tipis,
+   bukan kotak terpisah, supaya terbaca sebagai satu
+   kesatuan.
+*/
+
+/* height 100% membuat panel memanjang mengikuti tinggi
+   kolom kanan, sehingga dasarnya rata dengan kotak
+   Pendidikan dan tidak menyisakan ruang kosong */
+.cv-panel {
+    background-color: #172554;
+    border-radius: 10px;
+    color: #c8d2e4;
+    height: 100%;
+    padding: 30px 25px;
+    box-shadow: 0 6px 18px rgba(23, 37, 84, 0.10);
+}
+
+.cv-panel-kepala {
+    border-bottom: 1px solid #33487a;
+    padding-bottom: 22px;
+    text-align: center;
+}
+
+.cv-panel-bagian {
+    border-bottom: 1px solid #33487a;
+    padding: 20px 0;
+}
+
+.cv-panel-bagian:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cv-panel-bagian h2 {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.cv-panel-bagian p {
+    color: #c8d2e4;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.cv-panel-bagian b {
+    color: white;
+}
+
+.cv-panel-daftar {
+    padding-left: 18px;
+}
+
+.cv-panel-daftar li {
+    color: #c8d2e4;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+/* 
+   KUTIPAN
+*/
+
+.cv-kutip {
+    margin-bottom: 26px;
+}
+
+.cv-kutip:last-child {
+    margin-bottom: 0;
+}
+
+/* Tanda kutip besar. display block supaya tanda
+   kutip berdiri sendiri di atas dan di bawah teks. */
+.cv-kutip-tanda {
+    color: #3b5aa0;
+    display: block;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 0.5;
+}
+
+.cv-kutip-tutup {
+    text-align: right;
+}
+
+.cv-kutip p {
+    color: #dbe4f5;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 14px 0;
+}
+
+.cv-kutip-sumber {
+    color: #93c5fd;
+    display: block;
+    font-size: 11px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* 
+   FOTO CV
+*/
+
+/* object-position menggeser bingkai potongan ke atas.
+*/
+.cv-foto {
+    border: 4px solid #33487a;
+    border-radius: 50%;
+    display: block;
+    height: 150px;
+    margin: 0 auto 16px auto;
+    object-fit: cover;
+    object-position: center 12%;
+    width: 150px;
+}
+
+.cv-nama {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.cv-peran {
+    color: #93c5fd;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* 
+   DAFTAR
+*/
+
+.cv-daftar,
+.cv-daftar-urut {
+    padding-left: 20px;
+}
+
+.cv-daftar li,
+.cv-daftar-urut li {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.cv-daftar-urut li {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.cv-daftar-urut b {
+    color: #172554;
+}
+
+/* 
+   LINIMASA PENGALAMAN
+   position relative + absolute.
+ */
+
+.cv-item {
+    position: relative;
+    border-left: 2px solid #dddddd;
+    padding-bottom: 22px;
+    padding-left: 26px;
+}
+
+.cv-item:last-child {
+    border-left-color: white;
+    padding-bottom: 0;
+}
+
+/* lebar titik 12px, jadi pusatnya 6px dari tepi kirinya.
+   Garis rel adalah border 2px, pusatnya 1px. Nilai -7px
+   membuat pusat titik tepat berada di atas pusat rel. */
+.cv-titik {
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+}
+
+.cv-periode {
+    color: #2563eb;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cv-jabatan {
+    color: #172554;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.cv-tempat {
+    color: #555;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cv-item p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/*
+   RESPONSIVE HALAMAN CV
+*/
+
+@media (max-width: 768px) {
+
+    /* dua kolom dilipat jadi satu. Peta area ditulis
+       ulang sehingga deskripsi karakter naik ke urutan
+       pertama: di layar HP, pembaca sebaiknya tahu dulu
+       siapa orangnya sebelum melihat daftar keahlian. */
+    .cv-badan {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "ringkas"
+            "kiri"
+            "kanan";
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .cv-kotak {
+        padding: 18px;
+    }
+
+    .cv-item {
+        padding-left: 18px;
+    }
+
+    .cv-jabatan {
+        font-size: 15px;
+    }
+
+}

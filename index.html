@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Gates | Portfolio</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+
+
+<body id="atas">
+
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="container navbar">
+
+        <div class="logo">BILL GATES</div>
+
+        <div class="menu">
+            <a href="#tentang">Tentang<span class="label-panjang"> Saya</span></a>
+            <a href="#perjalanan">Perjalanan<span class="label-panjang"> Saya</span></a>
+            <a href="#karya">Karya<span class="label-panjang"> Tulis</span></a>
+            <a href="#hubungi">Hubungi<span class="label-panjang"> Saya</span></a>
+        </div>
+
+        <a href="cv.html" class="btn">Lihat CV</a>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+    <div class="container hero-isi">
+
+        <div class="hero-teks">
+
+            <div class="hero-label">TEKNOLOGI &middot; INOVASI &middot; DAMPAK</div>
+
+            <h1>Bill <span>Gates</span></h1>
+
+            <h2>Teknologi selalu membuat saya penasaran.</h2>
+
+            <p>
+                Perjalanan saya dimulai dari ketertarikan terhadap komputer.
+                Bersama Paul Allen, saya kemudian mendirikan Microsoft. Hari ini
+                saya masih terus belajar bagaimana teknologi dapat membantu
+                menyelesaikan berbagai masalah dunia.
+            </p>
+
+            <div class="hero-tombol">
+                <a href="cv.html" class="btn">Lihat CV Kreatif &rarr;</a>
+                <a href="#perjalanan" class="btn btn-putih">Lihat Perjalanan Saya</a>
+            </div>
+
+        </div>
+
+        <div class="hero-gambar">
+            <!-- srcset + sizes, browser memilih berkas sesuai lebar
+                 layar. Angka 500w / 960w / 1280w adalah lebar asli
+                 tiap berkas, jadi harus sesuai ukuran sebenarnya. -->
+            <img
+                src="images/gates-hero-960.jpg"
+                srcset="
+                    images/gates-hero-500.jpg   500w,
+                    images/gates-hero-960.jpg   960w,
+                    images/gates-hero-1280.jpg 1280w
+                "
+                sizes="(max-width: 768px) 90vw, 380px"
+                alt="Foto Bill Gates pada tahun 2023"
+                width="380"
+                height="430"
+            >
+        </div>
+
+    </div>
+</header>
+
+
+<!-- STATISTIK -->
+
+<div class="container statistik">
+    <div class="statistik-kotak">
+
+        <div class="statistik-item">
+            <h3>1975</h3>
+            <p>Microsoft didirikan</p>
+        </div>
+
+        <div class="statistik-item">
+            <h3>25 Tahun</h3>
+            <p>Memimpin sebagai CEO</p>
+        </div>
+
+        <div class="statistik-item">
+            <h3>5 Buku</h3>
+            <p>Diterbitkan sejak 1995</p>
+        </div>
+
+        <div class="statistik-item">
+            <h3>2000</h3>
+            <p>Awal Gates Foundation</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- TENTANG -->
+
+<section class="bagian" id="tentang">
+    <div class="container">
+
+        <div class="judul-bagian">
+            <h2>Tentang Saya</h2>
+            <p>Sedikit cerita mengenai perjalanan saya.</p>
+        </div>
+
+        <div class="tentang-isi">
+
+            <div class="tentang-gambar">
+                <img
+                    src="images/lakeside-1970.jpg"
+                    alt="Bill Gates dan Paul Allen di terminal Lakeside School tahun 1970"
+                    width="960"
+                    height="649"
+                >
+                <small class="tentang-keterangan">
+                    <i>Paul Allen dan Bill Gates di Lakeside School, 1970.</i>
+                </small>
+            </div>
+
+            <div class="tentang-teks">
+
+                <h2>Dari rasa penasaran menjadi sebuah perjalanan.</h2>
+
+                <p>
+                    <b>William Henry Gates III</b> lahir di
+                    <u>Seattle, Washington</u> pada 28 Oktober 1955. Saya mulai
+                    menulis program pada usia 13 tahun, sebuah permainan
+                    <i>tic-tac-toe</i> dalam bahasa BASIC, setelah sekolah saya
+                    membeli waktu komputer dari sebuah mesin General Electric.
+                </p>
+
+                <p>
+                    Pada 1975 saya keluar dari Harvard dan mendirikan
+                    <mark><b>Microsoft</b></mark> bersama Paul Allen. Saya memimpin
+                    perusahaan itu sebagai CEO selama 25 tahun, lalu perlahan
+                    berpindah ke pekerjaan filantropi lewat Gates
+                    Foundation<sup><a href="#catatan-1">1</a></sup>.
+                </p>
+
+                <p>
+                    Fokus terbesar saya hari ini adalah menurunkan emisi
+                    CO<sub>2</sub> hingga nol bersih serta memberantas penyakit
+                    menular seperti polio, malaria, dan tuberkulosis. Perkiraan
+                    kekayaan saya pernah dilaporkan <s>US$130 miliar</s> dan kini
+                    tercatat sekitar
+                    <b>US$106,5 miliar</b><sup><a href="#catatan-2">2</a></sup>.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Tabel biodata: selebar wadah, di bawah baris foto + teks -->
+        <div class="biodata">
+
+            <div class="biodata-baris">
+                <div class="biodata-label">Nama Lengkap</div>
+                <div class="biodata-nilai">William Henry Gates III</div>
+            </div>
+
+            <div class="biodata-baris">
+                <div class="biodata-label">Tempat, Tanggal Lahir</div>
+                <div class="biodata-nilai">Seattle, 28 Oktober 1955</div>
+            </div>
+
+            <div class="biodata-baris">
+                <div class="biodata-label">Kebangsaan</div>
+                <div class="biodata-nilai">Amerika Serikat</div>
+            </div>
+
+            <div class="biodata-baris">
+                <div class="biodata-label">Pendidikan</div>
+                <div class="biodata-nilai">Harvard University (1973&ndash;1975)</div>
+            </div>
+
+            <div class="biodata-baris">
+                <div class="biodata-label">Pekerjaan</div>
+                <div class="biodata-nilai">Pendiri Microsoft, Ketua Gates Foundation</div>
+            </div>
+
+            <div class="biodata-baris">
+                <div class="biodata-label">Situs</div>
+                <div class="biodata-nilai">gatesnotes.com</div>
+            </div>
+
+        </div>
+
+        <p class="tentang-catatan">
+            <small>
+                Seluruh data pada halaman ini dikutip dari sumber publik
+                dan dipakai untuk keperluan latihan Praktikum Modul 1.
+            </small>
+        </p>
+
+    </div>
+</section>
+
+
+<!-- PERJALANAN -->
+
+<section class="bagian perjalanan" id="perjalanan">
+    <div class="container">
+
+        <div class="judul-bagian">
+            <h2>Perjalanan Saya</h2>
+            <p>Beberapa bagian penting dalam perjalanan hidup saya.</p>
+        </div>
+
+        <div class="perjalanan-linimasa">
+
+            <!-- garis penghubung: elemen sungguhan, bukan ::before -->
+            <div class="perjalanan-garis"></div>
+
+            <div class="perjalanan-baris">
+
+                <div class="perjalanan-item">
+                    <div class="perjalanan-titik"></div>
+                    <div class="perjalanan-kotak">
+                        <h3>1955</h3>
+                        <p>Saya lahir di Seattle, Washington, Amerika Serikat.</p>
+                    </div>
+                </div>
+
+                <div class="perjalanan-item">
+                    <div class="perjalanan-titik"></div>
+                    <div class="perjalanan-kotak">
+                        <h3>1973</h3>
+                        <p>
+                            Saya mulai menempuh pendidikan di Harvard University,
+                            mengambil matematika dan ilmu komputer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="perjalanan-item">
+                    <div class="perjalanan-titik"></div>
+                    <div class="perjalanan-kotak">
+                        <h3>1975</h3>
+                        <p>
+                            Paul Allen dan saya mulai membangun Microsoft di
+                            Albuquerque.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="perjalanan-item">
+                    <div class="perjalanan-titik"></div>
+                    <div class="perjalanan-kotak">
+                        <h3>2000</h3>
+                        <p>
+                            Saya mulai lebih banyak berfokus pada kegiatan
+                            filantropi dan masalah global.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOKUS -->
+
+<section class="bagian" id="fokus">
+    <div class="container">
+
+        <div class="judul-bagian">
+            <h2>Hal yang Saya Pedulikan</h2>
+            <p>Teknologi bukan satu-satunya hal yang menarik perhatian saya.</p>
+        </div>
+
+        <div class="fokus-grid">
+
+            <div class="fokus-kartu fokus-utama">
+                <img
+                    class="fokus-gambar"
+                    src="images/microsoft-hq.jpg"
+                    alt="Gedung 92 kampus Microsoft di Redmond"
+                    width="960"
+                    height="640"
+                >
+                <div class="fokus-isi">
+                    <h3>Teknologi</h3>
+                    <p>
+                        Komputer mengubah hidup saya. Sampai sekarang saya tetap
+                        tertarik melihat bagaimana teknologi baru bisa mengubah
+                        cara kita hidup dan bekerja. Dari penjual interpreter
+                        BASIC, Microsoft tumbuh menjadi penentu standar sistem
+                        operasi komputer pribadi di seluruh dunia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fokus-kartu">
+                <img
+                    class="fokus-gambar"
+                    src="images/gates-foundation.jpg"
+                    alt="Gedung kantor pusat Gates Foundation di Seattle"
+                    width="960"
+                    height="540"
+                >
+                <div class="fokus-isi">
+                    <h3>Kesehatan Global</h3>
+                    <p>
+                        Banyak masalah kesehatan sebenarnya bisa dicegah.
+                        Tantangannya adalah membuat solusi itu menjangkau semua
+                        orang.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fokus-kartu">
+                <img
+                    class="fokus-gambar fokus-gambar-sampul"
+                    src="images/buku-climate.png"
+                    alt="Sampul buku How to Avoid a Climate Disaster"
+                    width="500"
+                    height="732"
+                >
+                <div class="fokus-isi">
+                    <h3>Iklim &amp; Energi</h3>
+                    <p>
+                        Dunia membutuhkan energi yang lebih bersih tanpa
+                        menghentikan kemajuan.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- KARYA TULIS -->
+
+<section class="bagian" id="karya">
+    <div class="container">
+
+        <div class="judul-bagian">
+            <h2>Karya Tulis</h2>
+            <p>Buku yang saya tulis sejak 1995.</p>
+        </div>
+
+        <table class="tabel-karya">
+
+            <tr>
+                <th>Tahun</th>
+                <th>Judul</th>
+                <th>Topik</th>
+                <th class="kolom-catatan">Catatan</th>
+            </tr>
+
+            <tr>
+                <td>1995</td>
+                <td><i>The Road Ahead</i></td>
+                <td>Teknologi</td>
+                <td class="kolom-catatan">Visi awal tentang jalan raya informasi</td>
+            </tr>
+
+            <tr>
+                <td>1999</td>
+                <td><i>Business @ the Speed of Thought</i></td>
+                <td>Bisnis</td>
+                <td class="kolom-catatan">Peran teknologi dalam dunia usaha</td>
+            </tr>
+
+            <tr>
+                <td>2021</td>
+                <td><i>How to Avoid a Climate Disaster</i></td>
+                <td>Iklim</td>
+                <td class="kolom-catatan">Jalan menuju nol emisi bersih</td>
+            </tr>
+
+            <tr>
+                <td>2022</td>
+                <td><i>How to Prevent the Next Pandemic</i></td>
+                <td>Kesehatan</td>
+                <td class="kolom-catatan">Pelajaran dari pandemi COVID-19</td>
+            </tr>
+
+            <tr>
+                <td>2025</td>
+                <td><i>Source Code: My Beginnings</i></td>
+                <td>Memoar</td>
+                <td class="kolom-catatan">Bagian pertama dari rencana tiga buku</td>
+            </tr>
+
+        </table>
+
+    </div>
+</section>
+
+
+<!-- PENGHARGAAN -->
+
+<section class="bagian penghargaan" id="penghargaan">
+    <div class="container">
+
+        <div class="judul-bagian">
+            <h2>Penghargaan</h2>
+            <p>Beberapa momen yang menjadi bagian dari perjalanan ini.</p>
+        </div>
+
+        <div class="penghargaan-grid">
+
+            <div class="penghargaan-kartu">
+                <div class="penghargaan-atas">
+                    <span class="penghargaan-tahun">1992</span>
+                    <img
+                        src="images/penghargaan-1992.jpg"
+                        alt="Bill Gates dalam sebuah pertemuan kenegaraan"
+                        width="369"
+                        height="442"
+                    >
+                </div>
+                <div class="penghargaan-isi">
+                    <h3>National Medal of Technology</h3>
+                    <p>
+                        Penghargaan atas kontribusi Bill Gates dan Microsoft
+                        terhadap perkembangan teknologi komputer pribadi.
+                    </p>
+                    <div class="penghargaan-foto-info">
+                        Foto dokumentasi Bill Gates dalam sebuah pertemuan resmi
+                        kenegaraan.
+                    </div>
+                </div>
+            </div>
+
+            <div class="penghargaan-kartu">
+                <div class="penghargaan-atas">
+                    <span class="penghargaan-tahun">2015</span>
+                    <img
+                        src="images/penghargaan-2015.jpg"
+                        alt="Bill Gates bertemu Perdana Menteri India Narendra Modi"
+                        width="960"
+                        height="990"
+                    >
+                </div>
+                <div class="penghargaan-isi">
+                    <h3>Padma Bhushan</h3>
+                    <p>
+                        Salah satu penghargaan sipil tertinggi India, diberikan
+                        atas kontribusinya dalam bidang sosial.
+                    </p>
+                    <div class="penghargaan-foto-info">
+                        Dokumentasi Bill Gates bertemu Perdana Menteri Narendra
+                        Modi di New Delhi, Desember 2015.
+                    </div>
+                </div>
+            </div>
+
+            <div class="penghargaan-kartu">
+                <div class="penghargaan-atas">
+                    <span class="penghargaan-tahun">2016</span>
+                    <img
+                        src="images/penghargaan-2016.jpg"
+                        alt="Bill Gates berbincang dengan Presiden Barack Obama"
+                        width="960"
+                        height="663"
+                    >
+                </div>
+                <div class="penghargaan-isi">
+                    <h3>Presidential Medal of Freedom</h3>
+                    <p>
+                        Salah satu penghargaan sipil tertinggi Amerika Serikat,
+                        diberikan kepada Bill dan Melinda Gates.
+                    </p>
+                    <div class="penghargaan-foto-info">
+                        Dokumentasi Bill Gates bersama Presiden Barack Obama di
+                        sela KTT iklim COP21.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HUBUNGI -->
+
+<section class="bagian" id="hubungi">
+    <div class="container">
+
+        <div class="judul-bagian">
+            <h2>Hubungi Saya</h2>
+            <p>Ajukan undangan, kerja sama, atau pertanyaan.</p>
+        </div>
+
+        <form class="form-hubungi" action="/kirim" method="POST">
+            <fieldset>
+
+                <legend>Formulir Kontak</legend>
+
+                <label for="nama">Nama Lengkap</label>
+                <input
+                    class="isian"
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                >
+
+                <label for="surel">Surel</label>
+                <input
+                    class="isian"
+                    type="email"
+                    id="surel"
+                    name="surel"
+                    placeholder="nama@contoh.com"
+                    required
+                >
+
+                <label for="topik">Topik</label>
+                <select class="isian" id="topik" name="topik">
+                    <option value="kesehatan">Kesehatan Global</option>
+                    <option value="energi">Energi Bersih</option>
+                    <option value="pendidikan">Pendidikan</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+
+                <div class="form-baris">
+
+                    <div class="form-kolom">
+                        <label for="tanggal">Tanggal Pertemuan</label>
+                        <input class="isian" type="date" id="tanggal" name="tanggal">
+                    </div>
+
+                    <div class="form-kolom">
+                        <label for="jam">Jam</label>
+                        <input class="isian" type="time" id="jam" name="jam">
+                    </div>
+
+                    <div class="form-kolom">
+                        <label for="peserta">Jumlah Peserta</label>
+                        <input
+                            class="isian"
+                            type="number"
+                            id="peserta"
+                            name="peserta"
+                            min="1"
+                            max="500"
+                            value="10"
+                        >
+                    </div>
+
+                </div>
+
+                <p class="form-label-grup">Jenis Pesan</p>
+                <div class="form-radio">
+
+                    <input type="radio" id="jenis-undangan" name="jenis" value="undangan" checked>
+                    <label for="jenis-undangan">Undangan</label>
+
+                    <input type="radio" id="jenis-kerjasama" name="jenis" value="kerjasama">
+                    <label for="jenis-kerjasama">Kerja Sama</label>
+
+                    <input type="radio" id="jenis-lain" name="jenis" value="lain">
+                    <label for="jenis-lain">Lain-lain</label>
+
+                </div>
+
+                <label for="pesan">Pesan</label>
+                <textarea
+                    class="isian"
+                    id="pesan"
+                    name="pesan"
+                    rows="5"
+                    placeholder="Tuliskan pesan Anda"
+                ></textarea>
+
+                <div class="form-tombol">
+                    <button type="submit">Kirim Pesan</button>
+                    <button type="reset">Kosongkan</button>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</section>
+
+
+<!-- AJAKAN AKHIR -->
+
+<section class="bagian ajakan">
+    <div class="container">
+
+        <h2>Ingin mengenal perjalanan saya lebih singkat?</h2>
+
+        <p>
+            Lihat pendidikan, pengalaman, kemampuan, dan penghargaan saya
+            pada halaman CV.
+        </p>
+
+        <a href="cv.html" class="btn btn-putih">Buka CV Saya &rarr;</a>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-sosial">
+            <a class="footer-tautan" href="https://www.gatesnotes.com">GatesNotes</a>
+            <a class="footer-tautan" href="https://www.gatesfoundation.org">Gates Foundation</a>
+            <a class="footer-tautan" href="https://en.wikipedia.org/wiki/Bill_Gates">Wikipedia</a>
+        </div>
+
+        <p class="footer-catatan" id="catatan-1">
+            <small>
+                1. Gates Foundation berdiri pada tahun 2000 dan berganti nama
+                pada 2024 setelah Melinda French Gates mengundurkan diri sebagai
+                ketua bersama.
+            </small>
+        </p>
+
+        <p class="footer-catatan" id="catatan-2">
+            <small>
+                2. Angka kekayaan mengikuti laporan Forbes dan berubah
+                sewaktu-waktu.
+            </small>
+        </p>
+
+        <small class="footer-kredit">
+            Dibuat untuk Praktikum Modul 1 Pemrograman Web 2026 &middot;
+            Kelompok A14 Asisten IRL &middot; Foto dari Wikimedia Commons
+        </small>
+
+        <small class="footer-anggota">
+            Sultan Ahmad Maulana (5027251070) &middot;
+            Sulthan Daffa Al Hasyimi (5027251091) &middot;
+            Senna Bagus Harimurti (5027251106)
+        </small>
+
+    </div>
+</footer>
+
+
+<!-- KEMBALI KE ATAS -->
+
+<a class="ke-atas" href="#atas" title="Kembali ke atas">&uarr;</a>
+
+
+</body>
+
+</html>

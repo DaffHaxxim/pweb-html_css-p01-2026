@@ -1,0 +1,791 @@
+/* 
+   landing.css  -  PEMILIK: Anggota 2
+   Hanya dipakai oleh index.html.
+*/
+
+/* 
+   HERO
+   flex + longhand flex-grow / shrink / basis
+*/
+
+.hero {
+    background-color: white;
+    padding: 70px 0 90px 0;
+}
+
+.hero-isi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+/* ditulis longhand (bukan "flex: 1 1 340px") supaya tiap
+   properti flex item bisa dijelaskan satu per satu */
+.hero-teks {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 340px;
+}
+
+/* flex-grow 0: foto tidak ikut melebar saat ada ruang
+   sisa, semua ruang lebih diberikan ke teks */
+.hero-gambar {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 380px;
+}
+
+.hero-gambar img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(23, 37, 84, 0.18);
+}
+
+.hero-label {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero-teks h1 {
+    color: #172554;
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-teks h1 span {
+    color: #2563eb;
+}
+
+.hero-teks h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-teks p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hero-tombol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* 
+   STATISTIK
+   position relative + z-index supaya kartu
+   terangkat menimpa bagian hero di atasnya
+*/
+
+.statistik {
+    position: relative;
+    z-index: 20;
+    margin-top: -45px;
+}
+
+.statistik-kotak {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(23, 37, 84, 0.10);
+}
+
+.statistik-item {
+    border-right: 1px solid #dddddd;
+    padding: 28px 18px;
+    text-align: center;
+}
+
+.statistik-item:last-child {
+    border-right: none;
+}
+
+.statistik-item:hover {
+    background-color: #eef4ff;
+}
+
+.statistik-item h3 {
+    color: #2563eb;
+    font-size: 22px;
+}
+
+.statistik-item p {
+    color: #666;
+    font-size: 13px;
+}
+
+/* 
+   TENTANG
+   flex dua kolom
+*/
+
+.tentang-isi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 45px;
+}
+
+.tentang-gambar {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 430px;
+}
+
+/* height: auto membiarkan tinggi mengikuti lebar, jadi foto
+   tampil pada rasio aslinya (960x649) dan tidak ada bagian
+   yang terpotong.
+*/
+.tentang-gambar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.tentang-keterangan {
+    color: #888888;
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tentang-teks {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 420px;
+}
+
+.tentang-teks h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.tentang-teks p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* 
+   BIODATA
+   baris label + nilai, disusun dengan flex
+*/
+
+/* Tabel biodata kini berdiri sendiri selebar wadah, di bawah
+   baris foto + teks. 
+*/
+.biodata {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.tentang-catatan {
+    color: #666;
+    margin-top: 18px;
+}
+
+.biodata-baris {
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 15px;
+}
+
+.biodata-baris:last-child {
+    border-bottom: none;
+}
+
+.biodata-baris:hover {
+    background-color: #f7faff;
+}
+
+.biodata-label {
+    color: #172554;
+    font-size: 13px;
+    font-weight: 600;
+    width: 190px;
+}
+
+.biodata-nilai {
+    color: #666;
+    font-size: 13px;
+}
+
+/* 
+   PERJALANAN
+   linimasa mendatar dengan garis penghubung
+*/
+
+.perjalanan {
+    background-color: #172554;
+}
+
+.perjalanan .judul-bagian h2 {
+    color: white;
+}
+
+.perjalanan .judul-bagian p {
+    color: #aab6cc;
+}
+
+/* position relative dipasang supaya garis penghubung di
+   dalamnya diposisikan terhadap kotak ini
+*/
+.perjalanan-linimasa {
+    position: relative;
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+/* Garis penghubung antar titik. 
+*/
+.perjalanan-garis {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    z-index: 1;
+    background-color: #60a5fa;
+    height: 4px;
+    width: 100%;
+}
+
+/* z-index lebih besar dari garis, jadi kartu tampil di
+   lapisan atas dan garis lewat di belakangnya */
+.perjalanan-baris {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.perjalanan-item {
+    text-align: center;
+}
+
+.perjalanan-titik {
+    background-color: #facc15;
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0 auto 18px auto;
+}
+
+/* position static ditulis eksplisit sebagai pembanding:
+   ini nilai bawaan semua elemen, tidak terpengaruh
+   top/left, dan z-index tidak berpengaruh padanya */
+.perjalanan-kotak {
+    position: static;
+    background-color: white;
+    border-radius: 8px;
+    min-height: 170px;
+    padding: 22px;
+}
+
+.perjalanan-kotak:hover {
+    background-color: #eef4ff;
+}
+
+.perjalanan-kotak h3 {
+    color: #2563eb;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.perjalanan-kotak p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 
+   FOKUS
+   grid tiga kolom dengan satu kartu unggulan
+   yang melebar 2 kolom dan 2 baris
+*/
+
+.fokus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.fokus-kartu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fokus-kartu:hover {
+    border-color: #2563eb;
+}
+
+/* grid-column / grid-row span 2: kartu ini menempati
+   dua kolom dan dua baris sekaligus 
+*/
+.fokus-utama {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.fokus-gambar {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Sampul buku berorientasi potret. object-fit: dipakai contain
+   supaya seluruh sampul tetap terlihat utuh. 
+*/
+.fokus-gambar-sampul {
+    background-color: #eef4ff;
+    height: 230px;
+    object-fit: contain;
+    padding: 14px;
+}
+
+/* kartu unggulan setinggi dua baris grid
+*/
+.fokus-utama .fokus-gambar {
+    height: 526px;
+}
+
+/* flex-grow pada isi kartu membuat semua kartu dalam
+   satu baris grid punya tinggi yang sama */
+.fokus-isi {
+    flex-grow: 1;
+    padding: 25px;
+}
+
+.fokus-isi h3 {
+    color: #1e3a8a;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.fokus-isi p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 
+   TABEL KARYA TULIS
+*/
+
+.tabel-karya {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabel-karya th,
+.tabel-karya td {
+    border: 1px solid #dddddd;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.tabel-karya th {
+    background-color: #172554;
+    color: white;
+    font-size: 14px;
+}
+
+.tabel-karya td {
+    color: #444;
+    font-size: 14px;
+}
+
+/* pseudo-class nth-child: memberi warna selang-seling
+   supaya baris panjang lebih mudah dibaca */
+.tabel-karya tr:nth-child(even) td {
+    background-color: #f4f7fb;
+}
+
+/* 
+   PENGHARGAAN
+*/
+
+.penghargaan {
+    background-color: #eef4ff;
+}
+
+.penghargaan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.penghargaan-kartu {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.penghargaan-kartu:hover {
+    border-color: #2563eb;
+}
+
+.penghargaan-atas {
+    position: relative;
+}
+
+.penghargaan-atas img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* object-position menggeser titik fokus gambar supaya
+   wajah tidak terpotong saat dipangkas object-fit */
+.penghargaan-kartu:first-child .penghargaan-atas img,
+.penghargaan-kartu:nth-child(2) .penghargaan-atas img {
+    object-position: center 20%;
+}
+
+.penghargaan-tahun {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+    background-color: #2563eb;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+}
+
+.penghargaan-isi {
+    padding: 20px;
+}
+
+.penghargaan-isi h3 {
+    color: #172554;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.penghargaan-isi p {
+    color: #666;
+    font-size: 13px;
+}
+
+/* keterangan kecil tentang isi foto, dipisah garis tipis */
+.penghargaan-foto-info {
+    border-top: 1px solid #eeeeee;
+    color: #999999;
+    font-size: 11px;
+    margin-top: 12px;
+    padding-top: 10px;
+}
+
+/* 
+   FORM HUBUNGI
+*/
+
+.form-hubungi fieldset {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.form-hubungi legend {
+    color: #172554;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.form-hubungi label {
+    display: block;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+/* memakai selektor kelas, bukan selektor atribut,
+   supaya tetap sama dengan yang diajarkan modul */
+.isian {
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 11px;
+    width: 100%;
+}
+
+/* :focus menandai kolom yang sedang diisi */
+.isian:focus {
+    background-color: #f7faff;
+    border-color: #2563eb;
+    outline: 2px solid #2563eb;
+}
+
+.form-baris {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.form-kolom {
+    flex: 1 1 170px;
+}
+
+.form-label-grup {
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+/* align-items mengatur posisi item di dalam satu baris,
+   sedangkan align-content mengatur posisi baris-baris.
+*/
+.form-radio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    gap: 8px 22px;
+    min-height: 58px;
+}
+
+.form-radio label {
+    display: inline-block;
+    margin: 0;
+}
+
+.form-tombol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.form-tombol button {
+    background-color: #2563eb;
+    border: 2px solid #2563eb;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 11px 24px;
+}
+
+.form-tombol button:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.form-tombol button:active {
+    background-color: #172554;
+    border-color: #172554;
+}
+
+/* 
+   AJAKAN AKHIR
+*/
+
+.ajakan {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+}
+
+.ajakan h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.ajakan p {
+    margin-bottom: 28px;
+}
+
+/* 
+   RESPONSIVE HALAMAN BERANDA
+*/
+
+@media (max-width: 768px) {
+
+    .hero-teks h1 {
+        font-size: 42px;
+    }
+
+    .hero-gambar img {
+        height: 380px;
+    }
+
+    .statistik-kotak {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* hapus garis kanan pada kolom terakhir tiap baris */
+    .statistik-item:nth-child(2) {
+        border-right: none;
+    }
+
+    /* linimasa berubah dari mendatar menjadi menurun:
+       garis dipindah ke sisi kiri dan tiap item
+       disusun mendatar (titik di kiri, kotak di kanan) */
+    .perjalanan-linimasa {
+        padding-top: 0;
+        padding-left: 25px;
+    }
+
+    .perjalanan-garis {
+        top: 0;
+        left: 34px;
+        width: 4px;
+        height: 100%;
+    }
+
+    .perjalanan-baris {
+        display: block;
+    }
+
+    .perjalanan-item {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .perjalanan-titik {
+        margin: 12px 25px 0 0;
+        flex-shrink: 0;
+    }
+
+    .perjalanan-kotak {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .fokus-grid,
+    .penghargaan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* kartu unggulan ikut menyusut: tetap 2 kolom,
+       tapi hanya 1 baris */
+    .fokus-utama {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .fokus-utama .fokus-gambar {
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero-teks h1 {
+        font-size: 34px;
+    }
+
+    .hero-gambar img {
+        height: 300px;
+    }
+
+    .statistik {
+        margin-top: -25px;
+    }
+
+    .statistik-kotak {
+        grid-template-columns: 1fr;
+    }
+
+    .statistik-item {
+        border-right: none;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .perjalanan-linimasa {
+        padding-left: 10px;
+    }
+
+    .perjalanan-garis {
+        left: 19px;
+    }
+
+    .perjalanan-titik {
+        margin-right: 18px;
+    }
+
+    /* label dan nilai ditumpuk supaya tidak terlalu
+       sempit di layar HP */
+    .biodata-baris {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .biodata-label {
+        width: 100%;
+    }
+
+    .fokus-grid,
+    .penghargaan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* span dikembalikan ke 1, kalau tidak grid satu
+       kolom akan terdorong melebihi layar */
+    .fokus-utama {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .fokus-utama .fokus-gambar {
+        height: 160px;
+    }
+
+    /* kolom paling tidak penting disembunyikan supaya
+       tabel tetap terbaca tanpa menggeser layar */
+    .kolom-catatan {
+        display: none;
+    }
+
+    .tabel-karya th,
+    .tabel-karya td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .form-hubungi fieldset {
+        padding: 20px;
+    }
+
+    /* tombol ditumpuk supaya mudah ditekan dengan jempol */
+    .form-tombol {
+        flex-direction: column;
+    }
+
+    .ajakan h2 {
+        font-size: 24px;
+    }
+
+}

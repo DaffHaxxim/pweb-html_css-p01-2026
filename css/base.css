@@ -1,0 +1,292 @@
+/* 
+   base.css  -  PEMILIK: 
+   Gaya bersama yang dipakai index.html DAN cv.html:
+   reset, warna, tipografi, navbar, tombol, footer.
+   Satu berkas untuk dua halaman HTML
+*/
+
+/* 
+   STYLE DASAR
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f9fc;
+    color: #222;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Bawaan browser untuk <mark> adalah kuning terang yang
+   menusuk di antara warna biru halaman. Diganti biru muda
+   dari palet supaya sorotan tetap terbaca tapi menyatu. */
+mark {
+    background-color: #dce9ff;
+    border-radius: 3px;
+    color: #172554;
+    padding: 1px 5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* padding-atas dibuat lega supaya judul tidak tertutup
+   navbar sticky ketika tautan #anchor diklik */
+.bagian {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.judul-bagian {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.judul-bagian h2 {
+    color: #172554;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.judul-bagian p {
+    color: #777;
+}
+
+/* 
+   NAVBAR
+   position sticky + z-index + flex
+*/
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    min-height: 70px;
+}
+
+.logo {
+    color: #1e3a8a;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu a {
+    color: #333;
+    font-size: 14px;
+}
+
+/* PSEUDO CLASS */
+
+.menu a:hover {
+    color: #2563eb;
+}
+
+.menu a:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* display inline: span ini mengalir menyatu dengan teks
+   tautan, tidak memulai baris baru dan lebar/tingginya
+   mengikuti isi. Di layar sempit nilainya diganti
+   menjadi none (lihat media query 480px di bawah). */
+.label-panjang {
+    display: inline;
+}
+
+/* 
+   TOMBOL
+*/
+
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    border: 2px solid #2563eb;
+    border-radius: 6px;
+    color: white;
+    padding: 11px 20px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.btn:active {
+    background-color: #172554;
+    border-color: #172554;
+}
+
+.btn-putih {
+    background-color: white;
+    border: 2px solid #dddddd;
+    color: #2563eb;
+}
+
+.btn-putih:hover {
+    background-color: #eef4ff;
+    border-color: #2563eb;
+}
+
+/* 
+   FOOTER
+   urutan pseudo-class wajib LVHA:
+   link -> visited -> hover -> active
+*/
+
+footer {
+    background-color: #172554;
+    color: #dddddd;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-sosial {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-tautan:link {
+    color: #93c5fd;
+}
+
+.footer-tautan:visited {
+    color: #c4b5fd;
+}
+
+.footer-tautan:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-tautan:active {
+    color: #2563eb;
+}
+
+.footer-catatan {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.footer-kredit {
+    display: block;
+    color: #9aa8c0;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.footer-anggota {
+    display: block;
+    color: #7f8fab;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+/* 
+   TOMBOL KEMBALI KE ATAS
+   position fixed: menempel pada viewport,
+   bukan pada alur dokumen
+*/
+
+.ke-atas {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 200;
+    background-color: #1e3a8a;
+    border-radius: 50%;
+    color: white;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.ke-atas:hover {
+    background-color: #2563eb;
+}
+
+/* 
+   RESPONSIVE
+   breakpoint mengikuti modul: 768px dan 480px
+*/
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .bagian {
+        padding-top: 85px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    /* label panjang disembunyikan supaya menu tetap
+       muat di layar HP tanpa perlu JavaScript */
+    .label-panjang {
+        display: none;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .judul-bagian h2 {
+        font-size: 24px;
+    }
+
+    /* tombol melayang dimatikan supaya tidak
+       menutupi isi halaman di layar sempit */
+    .ke-atas {
+        display: none;
+    }
+
+}
